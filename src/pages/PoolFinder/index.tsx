@@ -20,7 +20,7 @@ import { Dots } from '../Pool/styleds'
 
 enum Fields {
   TOKEN0 = 0,
-  TOKEN1 = 1
+  TOKEN1 = 1,
 }
 
 export default function PoolFinder() {
@@ -31,7 +31,6 @@ export default function PoolFinder() {
 
   const [currency0, setCurrency0] = useState<Currency | null>(ETHER)
   const [currency1, setCurrency1] = useState<Currency | null>(null)
-
   const [pairState, pair] = usePair(currency0 ?? undefined, currency1 ?? undefined)
   const addPair = usePairAdder()
   useEffect(() => {
@@ -120,7 +119,7 @@ export default function PoolFinder() {
 
             {currency0 && currency1 ? (
               pairState === PairState.EXISTS ? (
-                hasPosition && pair ? (
+                pair ? (
                   <MinimalPositionCard pair={pair} />
                 ) : (
                   <LightCard padding="45px 10px">

@@ -57,6 +57,7 @@ export function useAllTokenV1Exchanges(): { [exchangeAddress: string]: Token } {
   const factory = useV1FactoryContract()
   const args = useMemo(() => Object.keys(allTokens).map((tokenAddress) => [tokenAddress]), [allTokens])
 
+  /*
   const data = useSingleContractMultipleData(factory, 'getExchange', args, NEVER_RELOAD)
 
   return useMemo(
@@ -69,6 +70,12 @@ export function useAllTokenV1Exchanges(): { [exchangeAddress: string]: Token } {
       }, {}) ?? {},
     [allTokens, args, data]
   )
+  */
+
+  return useMemo(() => {
+    const i = allTokens[args[0][0]]
+    return {}
+  }, [allTokens, args])
 }
 
 // returns whether any of the tokens in the user's token list have liquidity on v1
