@@ -2571,10 +2571,10 @@
     "@svgr/plugin-svgo" "^5.4.0"
     loader-utils "^2.0.0"
 
-"@symblox/pancakeswap-sdk@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@symblox/pancakeswap-sdk/-/pancakeswap-sdk-1.0.1.tgz#5bfe3c8bb2ffcb75c825da8f2359fcbacb2c0b2d"
-  integrity sha512-UT1xGFm6bvAX+N/p8vDmvvoOQgXaBgxVQ7Z7fCMbmsEXjOPIO0GlgKDZeIQlbeyduLRI+6BliMmYlAvvclH7qQ==
+"@symblox/pancakeswap-sdk@^1.0.2-symblox":
+  version "1.0.2-symblox"
+  resolved "https://registry.yarnpkg.com/@symblox/pancakeswap-sdk/-/pancakeswap-sdk-1.0.2-symblox.tgz#dd60770da1eb22498de0626350ab6774eed49fd6"
+  integrity sha512-UQ7g2KF8xon3X6RKRQu/5fC/T72AIbA2u42El/GyXFLfX+xEHyu7vpHObrCibdWq9WuSikV/aNXkq93HESUY0w==
   dependencies:
     "@pancakeswap-libs/pancake-swap-core" "^0.1.0"
     big.js "^5.2.2"
