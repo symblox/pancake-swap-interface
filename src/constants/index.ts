@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@pancakeswap-libs/sdk'
+import { ChainId, JSBI, Percent, Token, WETH } from '@symblox/pancakeswap-sdk'
 
 export const ROUTER_ADDRESS = '0x533977884feB6B329511EEC95a305d647D5917c2'
 

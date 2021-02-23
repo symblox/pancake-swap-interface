@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@pancakeswap-libs/sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@symblox/pancakeswap-sdk'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {
@@ -13,7 +13,7 @@ describe('prices', () => {
     it('returns undefined for undefined', () => {
       expect(computeTradePriceBreakdown(undefined)).toEqual({
         priceImpactWithoutFee: undefined,
-        realizedLPFee: undefined
+        realizedLPFee: undefined,
       })
     })
 
