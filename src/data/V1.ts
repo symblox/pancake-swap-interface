@@ -27,7 +27,8 @@ export function useV1ExchangeAddress(tokenAddress?: string): string | undefined 
   const contract = useV1FactoryContract()
 
   const inputs = useMemo(() => [tokenAddress], [tokenAddress])
-  return useSingleCallResult(contract, 'getExchange', inputs)?.result?.[0]
+  return undefined
+  // return useSingleCallResult(contract, 'getExchange', inputs)?.result?.[0]
 }
 
 export class MockV1Pair extends Pair {

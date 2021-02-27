@@ -38,7 +38,7 @@ async function fetchChunk(
     )
   } catch (error) {
     console.info('Failed to fetch chunk inside retry', error)
-    throw error
+    // throw error
   }
   if (resultsBlockNumber.toNumber() < minBlockNumber) {
     throw new RetryableError('Fetched for old block number')
@@ -135,18 +135,14 @@ export default function Updater(): null {
 
   useEffect(() => {
     if (!latestBlockNumber || !chainId || !multicallContract) return
-
     const outdatedCallKeys: string[] = JSON.parse(serializedOutdatedCallKeys)
     if (outdatedCallKeys.length === 0) return
     const calls = outdatedCallKeys.map((key) => parseCallKey(key))
     // .filter(item => item.address.toLowerCase() !== '0xBCfCcbde45cE874adCB698cC183deBcF17952812'.toLowerCase())
-
     const chunkedCalls = chunkArray(calls, CALL_CHUNK_SIZE)
-
     if (cancellations.current?.blockNumber !== latestBlockNumber) {
       cancellations.current?.cancellations?.forEach((c) => c())
     }
-
     dispatch(
       fetchingMulticallResults({
         calls,
@@ -154,7 +150,6 @@ export default function Updater(): null {
         fetchingBlockNumber: latestBlockNumber,
       })
     )
-
     cancellations.current = {
       blockNumber: latestBlockNumber,
       cancellations: chunkedCalls.map((chunk, index) => {
@@ -166,11 +161,9 @@ export default function Updater(): null {
         promise
           .then(({ results: returnData, blockNumber: fetchBlockNumber }) => {
             cancellations.current = { cancellations: [], blockNumber: latestBlockNumber }
-
             // accumulates the length of all previous indices
             const firstCallKeyIndex = chunkedCalls.slice(0, index).reduce<number>((memo, curr) => memo + curr.length, 0)
             const lastCallKeyIndex = firstCallKeyIndex + returnData.length
-
             dispatch(
               updateMulticallResults({
                 chainId,
