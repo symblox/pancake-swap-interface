@@ -724,6 +724,14 @@
       "chainId": 97,
       "decimals": 18,
       "logoURI": ""
+    },
+    {
+      "name": "Symblox USD",
+      "symbol": "syUSD",
+      "address": "0x013D90f992Fe77A8EDb2637Bfa1271278465C2c1",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": ""
     }
   ]
 }
