@@ -65,7 +65,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [DAI, USDT],
   ],
   [ChainId.BSCTESTNET]: [
-    [SYX, syUSD, new Token(ChainId.BSCTESTNET, '0xae13d989dac2f0debff460ac112a837c89baa7cd', 18, 'WBNB', 'Wrapped BNB')],
+    [SYX, syUSD],
   ],
 }
 
