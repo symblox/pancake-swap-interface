@@ -17,8 +17,8 @@ export const UST = new Token(
   'UST',
   'Wrapped UST Token'
 )
-export const SYX = new Token(ChainId.BSCTESTNET, '0xd2f83494cd97e61f117015ba79cbf8f42fd13634', 18, 'SYX', 'Symblox v3')
-export const syUSD = new Token(ChainId.BSCTESTNET, '0x013D90f992Fe77A8EDb2637Bfa1271278465C2c1', 18, 'syUSD', 'Symblox USD')
+export const SYX = new Token(ChainId.BSCTESTNET, '0xd31216D08002f88c7aFE99F58245F05C8b59B046', 18, 'SYX', 'Symblox v3')
+export const syUSD = new Token(ChainId.BSCTESTNET, '0x81284700b1F1959a6DDb782A2f69A246cE26cb99', 18, 'syUSD', 'Symblox USD')
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],

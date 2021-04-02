@@ -720,7 +720,7 @@
     {
       "name": "Symblox v3",
       "symbol": "SYX",
-      "address": "0xd2f83494cd97e61f117015ba79cbf8f42fd13634",
+      "address": "0xd31216D08002f88c7aFE99F58245F05C8b59B046",
       "chainId": 97,
       "decimals": 18,
       "logoURI": ""
@@ -728,7 +728,7 @@
     {
       "name": "Symblox USD",
       "symbol": "syUSD",
-      "address": "0x013D90f992Fe77A8EDb2637Bfa1271278465C2c1",
+      "address": "0x81284700b1F1959a6DDb782A2f69A246cE26cb99",
       "chainId": 97,
       "decimals": 18,
       "logoURI": ""
