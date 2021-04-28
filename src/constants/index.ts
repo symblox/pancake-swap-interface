@@ -17,8 +17,14 @@ export const UST = new Token(
   'UST',
   'Wrapped UST Token'
 )
-export const SYX = new Token(ChainId.BSCTESTNET, '0xd31216D08002f88c7aFE99F58245F05C8b59B046', 18, 'SYX', 'Symblox v3')
-export const syUSD = new Token(ChainId.BSCTESTNET, '0x81284700b1F1959a6DDb782A2f69A246cE26cb99', 18, 'syUSD', 'Symblox USD')
+export const SYX = new Token(ChainId.BSCTESTNET, '0x909cE73d92a7e89D31Ac23E401BE65C538bD4355', 18, 'SYX', 'Symblox v3')
+export const syUSD = new Token(
+  ChainId.BSCTESTNET,
+  '0xB1d5c8a2Ea54805fF41C86BBF5e361Fc377Ab2E2',
+  18,
+  'syUSD',
+  'Symblox USD'
+)
 
 const WETH_ONLY: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET]],
@@ -64,9 +70,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
     [BUSD, USDT],
     [DAI, USDT],
   ],
-  [ChainId.BSCTESTNET]: [
-    [SYX, syUSD],
-  ],
+  [ChainId.BSCTESTNET]: [[SYX, syUSD]],
 }
 
 export const NetworkContextName = 'NETWORK'
