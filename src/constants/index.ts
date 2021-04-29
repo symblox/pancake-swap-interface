@@ -17,10 +17,10 @@ export const UST = new Token(
   'UST',
   'Wrapped UST Token'
 )
-export const SYX = new Token(ChainId.BSCTESTNET, '0x909cE73d92a7e89D31Ac23E401BE65C538bD4355', 18, 'SYX', 'Symblox v3')
+export const SYX = new Token(ChainId.BSCTESTNET, '0x69627d8E86DE129e4328Dd8C007AdB79a933caC7', 18, 'SYX', 'Symblox v3')
 export const syUSD = new Token(
   ChainId.BSCTESTNET,
-  '0xB1d5c8a2Ea54805fF41C86BBF5e361Fc377Ab2E2',
+  '0x3DC36aC191f5CAe3b0cf851f260Ebbf73E1Dc96a',
   18,
   'syUSD',
   'Symblox USD'
